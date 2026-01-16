@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: T-Work Spin Wheel System
- * Plugin URI: https://twork.com
+ * Plugin URI: https://www.tworksystem.com
  * Description: Professional Spin Wheel Management System with REST API, Admin Interface, and Analytics
  * Version: 1.0.0
  * Author: Maw Kunn Myat

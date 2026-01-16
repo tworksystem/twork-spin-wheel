@@ -457,7 +457,7 @@ docs: 16012026 - Update documentation
 This plugin is licensed under the **GPL v2 or later**.
 
 ```
-Copyright (C) 2024 Maw Kunn Myat
+Copyright (C) 2026 T-WORK SYSTEM Co.,Ltd.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -476,7 +476,7 @@ GNU General Public License for more details.
 
 **Maw Kunn Myat**
 
-- Email: mapoeeiphyu2017.miitinternship@gmail.com
+- Email: support@tworksystem.com
 - GitHub: [@tworksystem](https://github.com/tworksystem)
 
 ---
