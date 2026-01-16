@@ -477,7 +477,7 @@ GNU General Public License for more details.
 **Maw Kunn Myat**
 
 - Email: support@tworksystem.com
-- GitHub: [@tworksystem](https://github.com/tworksystem)
+- GitHub: [@mawkunnmyat](https://github.com/mawkunnmyat)
 
 ---
 
@@ -485,7 +485,7 @@ GNU General Public License for more details.
 
 For support, feature requests, or bug reports:
 
-- 📧 Email: support@twork.com
+- 📧 Email: support@tworksystem.com
 - 🐛 Issues: [GitHub Issues](https://github.com/tworksystem/twork-spin-wheel/issues)
 - 📚 Documentation: [Full Documentation](https://github.com/tworksystem/twork-spin-wheel/wiki)
 
