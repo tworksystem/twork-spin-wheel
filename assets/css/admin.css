@@ -1,0 +1,2407 @@
+/**
+ * Modern Admin Styles for T-Work Spin Wheel
+ * Creative & Professional Design - Ultra Modern Edition
+ */
+
+/* ============================================
+   Reset WordPress Defaults & Global Variables
+   ============================================ */
+.wrap.twork-spin-wheel-wrap {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure all text is visible by default with proper contrast */
+.wrap.twork-spin-wheel-wrap {
+    color: #1f2937;
+}
+
+.wrap.twork-spin-wheel-wrap * {
+    color: inherit;
+}
+
+/* Force visibility for common text elements with better contrast */
+.wrap.twork-spin-wheel-wrap p,
+.wrap.twork-spin-wheel-wrap span,
+.wrap.twork-spin-wheel-wrap div {
+    color: inherit;
+}
+
+.wrap.twork-spin-wheel-wrap td,
+.wrap.twork-spin-wheel-wrap th {
+    color: #1f2937 !important;
+}
+
+:root {
+    --twork-primary: #667eea;
+    --twork-primary-dark: #5568d3;
+    --twork-secondary: #764ba2;
+    --twork-accent: #f093fb;
+    --twork-success: #10b981;
+    --twork-warning: #f59e0b;
+    --twork-danger: #ef4444;
+    --twork-info: #3b82f6;
+    --twork-dark: #1f2937;
+    --twork-light: #f9fafb;
+    --twork-border: #e5e7eb;
+    --twork-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --twork-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --twork-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --twork-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --twork-gradient-light: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --twork-gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --twork-gradient-radial: radial-gradient(circle at top right, rgba(102, 126, 234, 0.15), transparent 50%);
+}
+
+/* ============================================
+   Main Container - Ultra Modern
+   ============================================ */
+.wrap.twork-spin-wheel-wrap {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 30px !important;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #f5f7fa 100%) !important;
+    background-size: 200% 200% !important;
+    animation: gradientShift 15s ease infinite !important;
+    min-height: calc(100vh - 32px);
+    position: relative;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.wrap.twork-spin-wheel-wrap::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.wrap.twork-spin-wheel-wrap > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   Header Section - Ultra Modern Glassmorphism
+   ============================================ */
+.twork-header-section {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-radius: 24px !important;
+    padding: 50px 60px !important;
+    margin: 0 0 40px 0 !important;
+    box-shadow: 
+        0 20px 60px rgba(102, 126, 234, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.twork-header-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+.twork-header-section::after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.1); }
+}
+
+.twork-header-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.twork-main-title {
+    background: transparent;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    background-clip: unset;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.twork-icon-wrapper {
+    width: 70px !important;
+    height: 70px !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.twork-icon-wrapper:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+.twork-icon-wrapper:hover {
+    transform: rotate(5deg) scale(1.05);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.4) inset !important;
+}
+
+.twork-icon-wrapper .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    background: transparent;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #fff;
+    background-clip: unset;
+}
+
+.twork-title-text {
+    flex: 1;
+}
+
+.twork-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%) !important;
+    color: #fff !important;
+    padding: 8px 20px !important;
+    border-radius: 25px !important;
+    font-size: 11px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    animation: pulseGlow 2s ease-in-out infinite !important;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { 
+        box-shadow: 
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            0 0 0 1px rgba(255, 255, 255, 0.3) inset,
+            0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    50% { 
+        box-shadow: 
+            0 4px 12px rgba(0, 0, 0, 0.15),
+            0 0 0 1px rgba(255, 255, 255, 0.3) inset,
+            0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.twork-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   Quick Stats in Header
+   ============================================ */
+.twork-quick-stats {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.twork-quick-stat-item {
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-quick-stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--twork-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.twork-quick-stat-item:hover::before {
+    transform: scaleX(1);
+}
+
+.twork-quick-stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.twork-quick-stat-value {
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff; /* Fallback color for browsers that don't support gradient text */
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .twork-quick-stat-value {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+.twork-quick-stat-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.twork-header-actions {
+    position: relative;
+    z-index: 1;
+}
+
+.twork-quick-link {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%) !important;
+    color: #fff !important;
+    padding: 14px 28px !important;
+    border-radius: 16px !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-quick-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.twork-quick-link:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.twork-quick-link:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.25) 100%) !important;
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 
+        0 12px 32px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.4) inset !important;
+    color: #fff !important;
+}
+
+.twork-quick-link .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ============================================
+   Navigation Tabs - Ultra Modern Glassmorphism
+   ============================================ */
+.nav-tab-wrapper.twork-nav-tabs {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border-radius: 20px !important;
+    padding: 10px !important;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+    margin: 0 0 40px 0 !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    position: sticky !important;
+    top: 32px !important;
+    z-index: 100 !important;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab {
+    background: transparent !important;
+    border: 2px solid transparent !important;
+    border-radius: 12px !important;
+    padding: 14px 24px !important;
+    color: #6b7280 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--twork-gradient);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab:hover::before {
+    left: 0;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab:hover {
+    color: #fff !important;
+    border-color: transparent !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3) !important;
+}
+
+.nav-tab span.dashicons {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.nav-tab:hover span.dashicons {
+    transform: rotate(360deg);
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab-active {
+    background: var(--twork-gradient) !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 
+        0 8px 24px rgba(102, 126, 234, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    font-weight: 800 !important;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab-active::before {
+    left: 0 !important;
+}
+
+.nav-tab-wrapper.twork-nav-tabs .nav-tab-active span.dashicons {
+    transform: scale(1.2) !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* ============================================
+   Tab Content
+   ============================================ */
+.twork-tab-content {
+    margin-top: 30px;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Stats Grid - Modern Cards
+   ============================================ */
+.twork-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    padding: 40px !important;
+    border-radius: 24px !important;
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--twork-gradient);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover::after {
+    top: -30%;
+    right: -30%;
+}
+
+.stat-card:hover {
+    transform: translateY(-12px) scale(1.03) !important;
+    box-shadow: 
+        0 20px 60px rgba(102, 126, 234, 0.2),
+        0 0 0 1px rgba(102, 126, 234, 0.3) inset !important;
+    border-color: var(--twork-primary) !important;
+}
+
+.stat-card h3 {
+    margin: 0 0 15px 0;
+    color: #4b5563 !important;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-card h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--twork-gradient);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.stat-card p {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 15px 0 0 0;
+    color: var(--twork-primary); /* Fallback color for browsers that don't support gradient text */
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -1px;
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .stat-card p {
+        background: var(--twork-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+/* ============================================
+   Section Headers
+   ============================================ */
+.twork-section-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--twork-border);
+}
+
+.twork-section-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--twork-primary); /* Fallback color for browsers that don't support gradient text */
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .twork-section-title {
+        background: var(--twork-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+.twork-section-title .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--twork-primary); /* Fallback color for browsers that don't support gradient text */
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .twork-section-title .dashicons {
+        background: var(--twork-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+.twork-section-description {
+    color: #4b5563 !important;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Form Styles
+   ============================================ */
+.twork-settings-container,
+.twork-prizes-container,
+.twork-analytics-container,
+.twork-export-container,
+.twork-advanced-container,
+.twork-templates-container,
+.twork-webhooks-container,
+.twork-health-container,
+.twork-backup-container {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    padding: 50px 60px !important;
+    border-radius: 24px !important;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+    margin-bottom: 40px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.twork-settings-container:hover,
+.twork-prizes-container:hover,
+.twork-analytics-container:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset !important;
+}
+
+.twork-settings-container::before,
+.twork-prizes-container::before,
+.twork-analytics-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--twork-gradient);
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.twork-form-sections {
+    display: grid;
+    gap: 30px;
+}
+
+.twork-form-section {
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--twork-border);
+}
+
+.twork-form-section-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    color: #1f2937 !important; /* Ensure form section title is visible with strong contrast */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--twork-border);
+    letter-spacing: 0.3px;
+}
+
+.twork-form-section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--twork-gradient);
+    border-radius: 2px;
+}
+
+.twork-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid var(--twork-border);
+}
+
+.twork-save-button {
+    min-width: 150px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.twork-preview-button {
+    min-width: 150px;
+    height: 48px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-table {
+    width: 100%;
+}
+
+.form-table th {
+    padding: 20px 10px 20px 0;
+    font-weight: 700;
+    color: #1f2937 !important;
+    vertical-align: top;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+.form-table td {
+    padding: 20px 10px;
+    color: #1f2937 !important; /* Ensure text is visible with strong contrast */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Ensure description text is visible */
+.form-table .description,
+p.description {
+    color: #4b5563 !important; /* Darker gray for better readability */
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.twork-form-table input[type="text"],
+.twork-form-table input[type="number"],
+.twork-form-table input[type="url"],
+.twork-form-table input[type="email"],
+.twork-form-table input[type="date"],
+.twork-form-table input[type="color"],
+.twork-form-table select,
+.twork-form-table textarea,
+.form-table input[type="text"],
+.form-table input[type="number"],
+.form-table input[type="url"],
+.form-table input[type="email"],
+.form-table input[type="date"],
+.form-table input[type="color"],
+.form-table select,
+.form-table textarea {
+    width: 100% !important;
+    max-width: 500px !important;
+    padding: 16px 20px !important;
+    border: 2px solid var(--twork-border) !important;
+    border-radius: 14px !important;
+    font-size: 15px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    color: var(--twork-dark) !important; /* Ensure text is visible */
+}
+
+/* Ensure textarea text is visible */
+.form-table textarea,
+.twork-form-table textarea {
+    color: var(--twork-dark) !important;
+    line-height: 1.6;
+}
+
+.twork-form-table input:hover,
+.twork-form-table select:hover,
+.twork-form-table textarea:hover,
+.form-table input:hover,
+.form-table select:hover,
+.form-table textarea:hover {
+    border-color: var(--twork-primary) !important;
+    box-shadow: 
+        0 0 0 4px rgba(102, 126, 234, 0.08),
+        0 4px 12px rgba(102, 126, 234, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+.twork-form-table input:focus,
+.twork-form-table select:focus,
+.twork-form-table textarea:focus,
+.form-table input:focus,
+.form-table select:focus,
+.form-table textarea:focus {
+    outline: none !important;
+    border-color: var(--twork-primary) !important;
+    box-shadow: 
+        0 0 0 5px rgba(102, 126, 234, 0.2),
+        0 8px 20px rgba(102, 126, 234, 0.15) !important;
+    transform: translateY(-3px) scale(1.01) !important;
+    background: #fff !important;
+    color: var(--twork-dark) !important; /* Ensure text remains visible on focus */
+}
+
+.form-table input[type="color"] {
+    width: 80px;
+    height: 50px;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.form-table input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--twork-primary);
+}
+
+/* ============================================
+   Buttons - Modern Design
+   ============================================ */
+.button,
+.button-primary,
+.button-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+}
+
+.button-primary {
+    background: var(--twork-gradient);
+    color: #fff;
+    box-shadow: var(--twork-shadow);
+}
+
+.button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--twork-shadow-lg);
+}
+
+.button-primary:active {
+    transform: translateY(0);
+}
+
+.button-secondary {
+    background: #fff;
+    color: var(--twork-primary);
+    border: 2px solid var(--twork-primary);
+}
+
+.button-secondary:hover {
+    background: var(--twork-primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Prize Form
+   ============================================ */
+.twork-prizes-container {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 30px;
+}
+
+.twork-prize-form {
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--twork-shadow);
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    border: 2px solid var(--twork-border);
+}
+
+.twork-prize-form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.twork-prize-form::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.twork-prize-form::-webkit-scrollbar-thumb {
+    background: var(--twork-gradient);
+    border-radius: 10px;
+}
+
+/* ============================================
+   Prize List
+   ============================================ */
+.wp-list-table {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--twork-shadow);
+    border: none;
+    background: #fff;
+}
+
+.wp-list-table thead th {
+    background: var(--twork-gradient) !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    font-size: 12px !important;
+    padding: 24px 20px !important;
+    border: none !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) inset !important;
+}
+
+.wp-list-table thead th:first-child {
+    border-top-left-radius: 16px;
+}
+
+.wp-list-table thead th:last-child {
+    border-top-right-radius: 16px;
+}
+
+.wp-list-table tbody tr {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid var(--twork-border);
+    background: #fff;
+}
+
+.wp-list-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.wp-list-table tbody tr:hover {
+    background: linear-gradient(135deg, rgba(249, 250, 251, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%) !important;
+    transform: translateX(8px) scale(1.01) !important;
+    box-shadow: 
+        -6px 0 0 var(--twork-primary),
+        0 4px 12px rgba(102, 126, 234, 0.15) !important;
+    border-left: 4px solid var(--twork-primary) !important;
+}
+
+.wp-list-table tbody td {
+    padding: 20px 18px;
+    vertical-align: middle;
+    font-weight: 600;
+    color: #1f2937 !important; /* Ensure table cell text is visible with strong contrast */
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.wp-list-table tbody td a {
+    color: var(--twork-primary); /* Ensure links are visible */
+    text-decoration: none;
+}
+
+.wp-list-table tbody td a:hover {
+    color: var(--twork-primary-dark);
+    text-decoration: underline;
+}
+
+/* ============================================
+   Templates Grid
+   ============================================ */
+.twork-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.twork-template-card {
+    background: #fff;
+    border: 2px solid var(--twork-border);
+    padding: 25px;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-template-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--twork-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.twork-template-card:hover::before {
+    transform: scaleX(1);
+}
+
+.twork-template-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--twork-shadow-lg);
+    border-color: var(--twork-primary);
+}
+
+.twork-template-card h3 {
+    margin: 0 0 15px 0;
+    color: var(--twork-dark);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.twork-template-card p {
+    margin: 8px 0;
+    color: #4b5563 !important;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.twork-template-card strong {
+    color: var(--twork-primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   Health Check
+   ============================================ */
+.twork-health-status h3 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.twork-health-status span {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.twork-health-checks {
+    display: grid;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.twork-health-item {
+    background: #fff;
+    border: 2px solid var(--twork-border);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.twork-health-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--twork-shadow);
+}
+
+.twork-health-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1f2937 !important;
+}
+
+/* ============================================
+   Notices
+   ============================================ */
+.notice {
+    border-radius: 16px;
+    border-left-width: 5px;
+    padding: 20px 25px;
+    margin: 25px 0;
+    box-shadow: var(--twork-shadow);
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+.notice p {
+    color: inherit !important;
+    font-weight: 700;
+    margin: 0;
+}
+
+.notice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: currentColor;
+}
+
+.notice-success {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-left-color: var(--twork-success);
+    color: #064e3b !important;
+}
+
+.notice-error {
+    background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border-left-color: var(--twork-danger);
+    color: #7f1d1d !important;
+}
+
+.notice-warning {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left-color: var(--twork-warning);
+    color: #78350f !important;
+}
+
+.notice-info {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border-left-color: var(--twork-info);
+    color: #1e3a8a !important;
+}
+
+/* ============================================
+   Loading States
+   ============================================ */
+.twork-loading {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--twork-border);
+    border-top-color: var(--twork-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.twork-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.twork-slide-in {
+    animation: slideInRight 0.5s ease;
+}
+
+/* ============================================
+   Additional Creative Elements
+   ============================================ */
+.twork-form-table {
+    background: transparent;
+}
+
+.twork-form-table th {
+    font-weight: 700;
+    color: var(--twork-dark);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.twork-form-table label,
+.form-table label {
+    font-weight: 700;
+    color: #1f2937 !important; /* Ensure labels are visible with strong contrast */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+}
+
+.twork-charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.chart-card {
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--twork-shadow);
+    border: 2px solid var(--twork-border);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--twork-gradient);
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--twork-shadow-lg);
+    border-color: var(--twork-primary);
+}
+
+.chart-card h3 {
+    margin: 0 0 25px 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--twork-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chart-card h3::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: var(--twork-gradient);
+    border-radius: 2px;
+}
+
+/* ============================================
+   Enhanced Button Styles
+   ============================================ */
+.twork-save-button,
+.button-primary.twork-save-button {
+    background: var(--twork-gradient) !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: 
+        0 8px 24px rgba(102, 126, 234, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset !important;
+    position: relative !important;
+    overflow: hidden !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    padding: 16px 32px !important;
+    border-radius: 14px !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.twork-save-button::before,
+.button-primary.twork-save-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.twork-save-button:hover::before,
+.button-primary.twork-save-button:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.twork-save-button:hover,
+.button-primary.twork-save-button:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 
+        0 12px 32px rgba(102, 126, 234, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+}
+
+.twork-preview-button {
+    border: 2px solid var(--twork-primary) !important;
+    color: var(--twork-primary) !important;
+    background: transparent !important;
+    transition: all 0.3s ease;
+}
+
+.twork-preview-button:hover {
+    background: var(--twork-primary) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ============================================
+   Prize Form Enhancements
+   ============================================ */
+.twork-prize-form {
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+    border: 2px solid var(--twork-border);
+}
+
+.twork-prize-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--twork-gradient);
+}
+
+/* ============================================
+   Template Cards Enhancement
+   ============================================ */
+.twork-template-card {
+    background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+}
+
+.twork-template-card h3 {
+    color: var(--twork-primary); /* Fallback color for browsers that don't support gradient text */
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .twork-template-card h3 {
+        background: var(--twork-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+/* ============================================
+   Loading Animation
+   ============================================ */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.twork-loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+    border-radius: 8px;
+    height: 20px;
+    margin: 10px 0;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1200px) {
+    .twork-prizes-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .twork-prize-form {
+        position: static;
+    }
+    
+    .twork-charts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .twork-header-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+    }
+    
+    .twork-header-actions {
+        margin-top: 20px;
+    }
+    
+    .twork-main-title {
+        font-size: 32px !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .twork-subtitle {
+        font-size: 15px !important;
+    }
+    
+    .twork-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card h3 {
+        font-size: 13px !important;
+    }
+    
+    .stat-card p {
+        font-size: 40px !important;
+    }
+    
+    .twork-templates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .twork-template-card h3 {
+        font-size: 17px !important;
+    }
+    
+    .twork-template-card p {
+        font-size: 14px !important;
+    }
+    
+    .nav-tab-wrapper.twork-nav-tabs {
+        flex-direction: column;
+        position: static;
+    }
+    
+    .nav-tab {
+        width: 100%;
+        justify-content: center;
+        font-size: 13px !important;
+    }
+    
+    .twork-settings-container,
+    .twork-prizes-container,
+    .twork-analytics-container {
+        padding: 25px 20px;
+    }
+    
+    .twork-form-section-title {
+        font-size: 20px !important;
+    }
+    
+    .form-table th {
+        font-size: 14px !important;
+    }
+    
+    .form-table td {
+        font-size: 14px !important;
+    }
+    
+    .twork-form-table label,
+    .form-table label {
+        font-size: 14px !important;
+    }
+    
+    .form-table .description,
+    p.description {
+        font-size: 13px !important;
+    }
+    
+    .twork-section-title {
+        font-size: 24px !important;
+    }
+    
+    .twork-section-description {
+        font-size: 15px !important;
+    }
+    
+    .twork-form-actions {
+        flex-direction: column;
+    }
+    
+    .twork-save-button,
+    .twork-preview-button {
+        width: 100%;
+        font-size: 14px !important;
+    }
+    
+    .wp-list-table tbody td {
+        font-size: 14px !important;
+    }
+}
+
+/* ============================================
+   Dark Mode Support (Future)
+   ============================================ */
+/* ============================================
+   Premium Visual Effects
+   ============================================ */
+.twork-tab-content {
+    animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow effect for active elements */
+.nav-tab-wrapper.twork-nav-tabs .nav-tab-active {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 
+            0 8px 24px rgba(102, 126, 234, 0.4),
+            0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+    }
+    50% {
+        box-shadow: 
+            0 8px 24px rgba(102, 126, 234, 0.6),
+            0 0 0 1px rgba(255, 255, 255, 0.3) inset,
+            0 0 30px rgba(102, 126, 234, 0.3);
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus-visible {
+    outline: 3px solid var(--twork-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   Advanced Particle Effects
+   ============================================ */
+.twork-particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.twork-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--twork-primary);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatParticle 15s infinite ease-in-out;
+}
+
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(100px, -100px) scale(1.5);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50px, -200px) scale(0.8);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(150px, -50px) scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+/* ============================================
+   Advanced Toast Notifications
+   ============================================ */
+.twork-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    pointer-events: none;
+}
+
+.twork-toast {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+    border-left: 5px solid var(--twork-primary);
+    min-width: 320px;
+    max-width: 450px;
+    pointer-events: auto;
+    transform: translateX(500px);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-toast::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--twork-gradient);
+    animation: toastProgress 5s linear forwards;
+}
+
+@keyframes toastProgress {
+    from {
+        width: 5px;
+    }
+    to {
+        width: 100%;
+        opacity: 0.1;
+    }
+}
+
+.twork-toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.twork-toast.success {
+    border-left-color: var(--twork-success);
+}
+
+.twork-toast.error {
+    border-left-color: var(--twork-danger);
+}
+
+.twork-toast.warning {
+    border-left-color: var(--twork-warning);
+}
+
+.twork-toast.info {
+    border-left-color: var(--twork-info);
+}
+
+.twork-toast-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.twork-toast-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.twork-toast.success .twork-toast-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.2) 100%);
+    color: var(--twork-success);
+}
+
+.twork-toast.error .twork-toast-icon {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(220, 38, 38, 0.2) 100%);
+    color: var(--twork-danger);
+}
+
+.twork-toast.warning .twork-toast-icon {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.2) 100%);
+    color: var(--twork-warning);
+}
+
+.twork-toast.info .twork-toast-icon {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+    color: var(--twork-info);
+}
+
+.twork-toast-message {
+    flex: 1;
+    font-weight: 700;
+    color: #1f2937 !important; /* Ensure toast message text is visible with strong contrast */
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.twork-toast-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: color 0.3s ease;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.twork-toast-close:hover {
+    color: var(--twork-danger);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* ============================================
+   Advanced Progress Bars
+   ============================================ */
+.twork-progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(229, 231, 235, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+}
+
+.twork-progress-bar {
+    height: 100%;
+    background: var(--twork-gradient);
+    border-radius: 10px;
+    position: relative;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.twork-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: progressShimmer 2s infinite;
+}
+
+@keyframes progressShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.twork-progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--twork-dark);
+    font-size: 14px;
+}
+
+/* ============================================
+   Advanced Modal System
+   ============================================ */
+.twork-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.twork-modal-overlay.show {
+    opacity: 1;
+}
+
+.twork-modal {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(249, 250, 251, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 24px;
+    box-shadow: 
+        0 25px 70px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.twork-modal-overlay.show .twork-modal {
+    transform: scale(1) translateY(0);
+}
+
+.twork-modal-header {
+    padding: 30px 40px 20px;
+    border-bottom: 2px solid var(--twork-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: inherit;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+}
+
+.twork-modal-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--twork-primary); /* Fallback color for browsers that don't support gradient text */
+    margin: 0;
+}
+
+/* Gradient text with proper fallback */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .twork-modal-title {
+        background: var(--twork-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Ensure fallback doesn't show */
+    }
+}
+
+.twork-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #9ca3af;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.twork-modal-close:hover {
+    color: var(--twork-danger);
+    background: rgba(239, 68, 68, 0.1);
+    transform: rotate(90deg);
+}
+
+.twork-modal-body {
+    padding: 30px 40px;
+}
+
+.twork-modal-footer {
+    padding: 20px 40px 30px;
+    border-top: 2px solid var(--twork-border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* ============================================
+   Advanced Tooltips
+   ============================================ */
+.twork-tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.twork-tooltip {
+    position: absolute;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 100001;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.twork-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1f2937;
+}
+
+.twork-tooltip-wrapper:hover .twork-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.twork-tooltip.top {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+}
+
+.twork-tooltip-wrapper:hover .twork-tooltip.top {
+    transform: translateX(-50%) translateY(0);
+}
+
+.twork-tooltip.bottom {
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.twork-tooltip-wrapper:hover .twork-tooltip.bottom {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ============================================
+   Advanced Badge System
+   ============================================ */
+.twork-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.twork-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.twork-badge:hover::before {
+    left: 100%;
+}
+
+.twork-badge-primary {
+    background: var(--twork-gradient);
+    color: #fff;
+}
+
+.twork-badge-success {
+    background: var(--twork-gradient-success);
+    color: #fff;
+}
+
+.twork-badge-warning {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #fff;
+}
+
+.twork-badge-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: #fff;
+}
+
+.twork-badge-info {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #fff;
+}
+
+/* ============================================
+   Advanced Card Hover Effects
+   ============================================ */
+.twork-card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.twork-card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+}
+
+/* ============================================
+   Advanced Loading Spinners
+   ============================================ */
+.twork-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(102, 126, 234, 0.2);
+    border-top-color: var(--twork-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.twork-spinner-dots {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.twork-spinner-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--twork-primary);
+    animation: spinnerDot 1.4s infinite ease-in-out;
+}
+
+.twork-spinner-dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.twork-spinner-dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes spinnerDot {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   Advanced Toggle Switches
+   ============================================ */
+.twork-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.twork-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.twork-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.twork-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.twork-toggle input:checked + .twork-toggle-slider {
+    background: var(--twork-gradient);
+}
+
+.twork-toggle input:checked + .twork-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+.twork-toggle input:focus + .twork-toggle-slider {
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+/* ============================================
+   Advanced Dark Mode Support
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    .wrap.twork-spin-wheel-wrap {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%) !important;
+        background-size: 200% 200% !important;
+    }
+    
+    .stat-card,
+    .twork-settings-container,
+    .twork-prize-form,
+    .twork-prizes-container,
+    .twork-analytics-container,
+    .twork-export-container,
+    .twork-advanced-container,
+    .twork-templates-container,
+    .twork-webhooks-container,
+    .twork-health-container,
+    .twork-backup-container {
+        background: rgba(30, 41, 59, 0.95) !important;
+        color: #f1f5f9 !important;
+        border-color: #334155 !important;
+    }
+    
+    .twork-header-section {
+        background: linear-gradient(135deg, rgba(51, 65, 85, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%) !important;
+    }
+    
+    .nav-tab-wrapper.twork-nav-tabs {
+        background: rgba(30, 41, 59, 0.8) !important;
+        border-color: #334155 !important;
+    }
+    
+    .nav-tab-wrapper.twork-nav-tabs .nav-tab {
+        color: #cbd5e1 !important;
+    }
+    
+    .form-table input,
+    .form-table select,
+    .form-table textarea {
+        background: rgba(15, 23, 42, 0.8) !important;
+        color: #f1f5f9 !important;
+        border-color: #334155 !important;
+    }
+    
+    .wp-list-table {
+        background: rgba(30, 41, 59, 0.95) !important;
+    }
+    
+    .wp-list-table tbody tr {
+        background: rgba(30, 41, 59, 0.95) !important;
+        color: #f1f5f9 !important;
+    }
+    
+    .twork-toast {
+        background: rgba(30, 41, 59, 0.95) !important;
+        color: #f1f5f9 !important;
+    }
+    
+    .twork-modal {
+        background: rgba(30, 41, 59, 0.98) !important;
+        color: #f1f5f9 !important;
+    }
+}
+
+/* ============================================
+   Advanced Responsive Enhancements
+   ============================================ */
+@media (max-width: 1200px) {
+    .twork-prizes-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .twork-prize-form {
+        position: static;
+        max-height: none;
+    }
+    
+    .twork-charts-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .twork-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .twork-header-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+    }
+    
+    .twork-header-actions {
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .twork-quick-link {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .twork-main-title {
+        font-size: 28px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .twork-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .twork-templates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-tab-wrapper.twork-nav-tabs {
+        flex-direction: column;
+        position: static;
+    }
+    
+    .nav-tab {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .twork-settings-container,
+    .twork-prizes-container,
+    .twork-analytics-container {
+        padding: 25px 20px;
+    }
+    
+    .twork-form-actions {
+        flex-direction: column;
+    }
+    
+    .twork-save-button,
+    .twork-preview-button {
+        width: 100%;
+    }
+    
+    .twork-modal {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+    
+    .twork-modal-header,
+    .twork-modal-body,
+    .twork-modal-footer {
+        padding: 20px;
+    }
+}
+
+/* ============================================
+   Advanced Accessibility
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .twork-header-section,
+    .nav-tab-wrapper,
+    .twork-form-actions,
+    .button {
+        display: none !important;
+    }
+    
+    .twork-settings-container,
+    .twork-prizes-container {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+    }
+}
