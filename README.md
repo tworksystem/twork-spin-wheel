@@ -457,7 +457,7 @@ docs: 16012026 - Update documentation
 This plugin is licensed under the **GPL v2 or later**.
 
 ```
-Copyright (C) 2024 T-Work System
+Copyright (C) 2024 Maw Kunn Myat
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -474,9 +474,9 @@ GNU General Public License for more details.
 
 ## 👥 Author
 
-**T-Work System**
+**Maw Kunn Myat**
 
-- Website: [https://twork.com](https://twork.com)
+- Email: mapoeeiphyu2017.miitinternship@gmail.com
 - GitHub: [@tworksystem](https://github.com/tworksystem)
 
 ---
@@ -502,7 +502,7 @@ For support, feature requests, or bug reports:
 
 <div align="center">
 
-**Made with ❤️ by T-Work System**
+**Made with ❤️ by Maw Kunn Myat**
 
 [⬆ Back to Top](#t-work-spin-wheel-system)
 

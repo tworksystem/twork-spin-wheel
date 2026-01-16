@@ -4,8 +4,8 @@
  * Plugin URI: https://twork.com
  * Description: Professional Spin Wheel Management System with REST API, Admin Interface, and Analytics
  * Version: 1.0.0
- * Author: T-Work System
- * Author URI: https://twork.com
+ * Author: Maw Kunn Myat
+ * Author URI: https://github.com/tworksystem
  * Text Domain: twork-spin-wheel
  * Domain Path: /languages
  * Requires at least: 5.0
